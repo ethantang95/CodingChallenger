@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Challenges\BSTDeleteNode.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />
     <Compile Include="Challenges\RandomSet.cs" />
@@ -54,9 +55,11 @@
     <Compile Include="GenericDataStructures\Tree\BinarySortedTree.cs" />
     <Compile Include="GenericDataStructures\Tree\BinaryTreeAbstract.cs" />
     <Compile Include="GenericDataStructures\Tree\BinaryTreeNode.cs" />
+    <Compile Include="GenericDataStructures\Tree\ChallengeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestChallenges\AddChallenge.cs" />
+    <Compile Include="Tools\TreeMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
