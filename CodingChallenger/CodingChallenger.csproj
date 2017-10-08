@@ -43,8 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Challenges\HappyNumber.cs" />
+    <Compile Include="Challenges\RandomCollection.cs" />
+    <Compile Include="Challenges\RandomSet.cs" />
+    <Compile Include="Framework\ChallengeAttribute.cs" />
+    <Compile Include="Framework\ChallengerRunner.cs" />
+    <Compile Include="Framework\IChallenge.cs" />
+    <Compile Include="Framework\SingleChallengeExecutor.cs" />
+    <Compile Include="GenericDataStructures\Tree\BinarySortedTree.cs" />
+    <Compile Include="GenericDataStructures\Tree\BinaryTreeAbstract.cs" />
+    <Compile Include="GenericDataStructures\Tree\BinaryTreeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestChallenges\AddChallenge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

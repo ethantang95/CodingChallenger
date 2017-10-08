@@ -1,0 +1,49 @@
+﻿using CodingChallenger.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CodingChallenger.Framework {
+    class ChallengerRunner {
+
+        public ChallengerRunner() { }
+
+        public void Run() {
+            var challengeTypes = TypesImplementingInterface(typeof(IChallenge<,>));
+            foreach (var challengeType in challengeTypes) {
+                var challengeAttribute = GetChallengeAttribute(challengeType);
+                if (challengeAttribute.ChallengeStatus == Challenge.NotDone) {
+                    var executor = new SingleChallengeExecutor(challengeType);
+                    executor.Run();
+                }
+            }
+            Console.WriteLine("All challenges has finished running");
+            Console.ReadLine();
+        }
+
+        private IEnumerable<Type> TypesImplementingInterface(Type desiredType) {
+            return AppDomain
+                .CurrentDomain
+                .GetAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(type => DoesTypeSupportInterface(type, desiredType));
+        }
+
+        private bool DoesTypeSupportInterface(Type type, Type inter) {
+            if (inter.IsAssignableFrom(type)) {
+                return true;
+            }
+            if (type.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == inter)) {
+                return true;
+            }
+            return false;
+        }
+
+        private ChallengeAttribute GetChallengeAttribute(Type type) {
+            var challengeAttribute = type.GetCustomAttributes(typeof(ChallengeAttribute), true);
+            return challengeAttribute.Length > 0 ? challengeAttribute[0] as ChallengeAttribute: new ChallengeAttribute(Challenge.AttributeNotUsed);
+        }
+    }
+}
