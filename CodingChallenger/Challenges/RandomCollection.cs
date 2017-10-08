@@ -6,6 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
+    /// <summary>
+    /// This is an extension to the Random Set question where now we can have duplicates.
+    /// The approach here is to find a way to store the all the indexes for the same element.
+    /// The way to do this is to use a HashSet, which allows retrieval and deletion in O(1) time.
+    /// This is because we do not care about the order of the elements again, so as long as
+    /// We can get a result in O(1) time, it is all fine.
+    /// 
+    /// Also, the index to element set is still a regular dictionary. This is because even
+    /// in the case of duplicates, it is impossible for two elements, whether same or different
+    /// to occupy the same index.
+    /// </summary>
     [Challenge(Challenge.Done)]
     public class RandomCollection : IChallenge<int, IEnumerable<string>> {
 

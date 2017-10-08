@@ -6,6 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
+    /// <summary>
+    /// The take away here is that we need to move the last element that was inserted into somewhere empty
+    /// Basically making sure that n members occupies the 1 to n index.
+    /// Since we do not actually care about the order they were inserted, we can just move the last element
+    /// to any empty space between 1 to n by swapping
+    /// 
+    /// The general solution here is to use 2 dictionaries, one keeping track the inserted value to its index
+    /// and the other for its inverse, the index to its inserted value so that fetching them both can be done
+    /// in O(1) time
+    /// </summary>
     [Challenge(Challenge.Done)]
     public class RandomSet : IChallenge<int, IEnumerable<string>> {
 

@@ -6,6 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
+    /// <summary>
+    /// The take away for this is that we want to detect a cycle, this is because if
+    /// the value x is calculated to become y, then if we get x again, we know that 
+    /// since this function is a 1 way function and y will be the solution.
+    /// This implies getting any of our previous solution would end up in a cycle.
+    /// 
+    /// The solution either keep track of previous results, which this one does and it takes
+    /// O(n) memory, or we can use Flyod cycles which can use O(1) memory
+    /// 
+    /// Both solution uses O(n) runtime
+    /// </summary>
     [Challenge(Challenge.Done)]
     class HappyNumber : IChallenge<int, bool> {
         public bool ExpectedOutput() {
