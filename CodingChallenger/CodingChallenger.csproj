@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Challenges\BSTDeleteNode.cs" />
+    <Compile Include="Challenges\CanPermutePalindrome.cs" />
     <Compile Include="Challenges\FactorCombination.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />
