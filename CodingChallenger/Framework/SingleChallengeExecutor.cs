@@ -27,21 +27,33 @@ namespace CodingChallenger.Framework {
         }
 
         private object GetInput() {
-            var inputMethod = _challenge.GetMethod("Input");
-            var input = inputMethod.Invoke(_instance, new object[] { });
-            return input;
+            try {
+                var inputMethod = _challenge.GetMethod("Input");
+                var input = inputMethod.Invoke(_instance, new object[] { });
+                return input;
+            } catch (Exception e) {
+                throw e.InnerException;
+            }
         }
 
         private object GetRunResult(object input) {
-            var runMethod = _challenge.GetMethod("Run");
-            var runResult = runMethod.Invoke(_instance, new object[] { input });
-            return runResult;
+            try {
+                var runMethod = _challenge.GetMethod("Run");
+                var runResult = runMethod.Invoke(_instance, new object[] { input });
+                return runResult;
+            } catch (Exception e) {
+                throw e.InnerException;
+            }
         }
 
         private object GetExpectedOutput() {
-            var expectedOutputMethod = _challenge.GetMethod("ExpectedOutput");
-            var expectedOutput = expectedOutputMethod.Invoke(_instance, new object[] { });
-            return expectedOutput;
+            try {
+                var expectedOutputMethod = _challenge.GetMethod("ExpectedOutput");
+                var expectedOutput = expectedOutputMethod.Invoke(_instance, new object[] { });
+                return expectedOutput;
+            } catch (Exception e) {
+                throw e.InnerException;
+            }
         }
 
         private void CheckIfEquals(object output, object expectedOutput) {

@@ -51,6 +51,7 @@
     <Compile Include="Challenges\RandomCollection.cs" />
     <Compile Include="Challenges\RandomSet.cs" />
     <Compile Include="Challenges\RomanToInteger.cs" />
+    <Compile Include="Challenges\ShortestPalindrome.cs" />
     <Compile Include="Framework\ChallengeAttribute.cs" />
     <Compile Include="Framework\ChallengerRunner.cs" />
     <Compile Include="Framework\IChallenge.cs" />
