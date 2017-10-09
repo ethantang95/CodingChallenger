@@ -47,6 +47,7 @@
     <Compile Include="Challenges\CanPermutePalindrome.cs" />
     <Compile Include="Challenges\FactorCombination.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
+    <Compile Include="Challenges\LongestPalindromeSubstring.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />
     <Compile Include="Challenges\RandomSet.cs" />
     <Compile Include="Challenges\RomanToInteger.cs" />
