@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// 
     /// The downside is that this generates a lot of duplicates
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class GenerateParentheses : IChallenge<int, IList<string>> {
         public IList<string> ExpectedOutput() {
             var result = new List<string>();

@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.GenericDataStructures.Tree {
-    class ChallengeNode {
+    class ChallengeTreeNode {
         public int val { get; private set; }
-        public ChallengeNode left { get; set; }
-        public ChallengeNode right { get; set; }
+        public ChallengeTreeNode left { get; set; }
+        public ChallengeTreeNode right { get; set; }
 
-        public ChallengeNode(int val) {
+        public ChallengeTreeNode(int val) {
             this.val = val;
         }
 
@@ -25,7 +25,7 @@ namespace CodingChallenger.GenericDataStructures.Tree {
                 return false;
             }
 
-            var other = obj as ChallengeNode;
+            var other = obj as ChallengeTreeNode;
 
             if (val != other.val) {
                 return false;
