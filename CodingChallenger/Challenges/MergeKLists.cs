@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// to keep track of the min value. This would make it work in log(n) time. Could use min heap for
     /// potentially faster performance
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class MergeKLists : IChallenge<List<ChallengeLinkNode>, ChallengeLinkNode> {
         public ChallengeLinkNode ExpectedOutput() {
             var first = new ChallengeLinkNode(1);
