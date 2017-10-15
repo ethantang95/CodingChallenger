@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,7 +33,8 @@ namespace CodingChallenger.Framework {
                 var input = inputMethod.Invoke(_instance, new object[] { });
                 return input;
             } catch (Exception e) {
-                throw e.InnerException;
+                ThrowDynamicException(e);
+                return null;
             }
         }
 
@@ -42,7 +44,8 @@ namespace CodingChallenger.Framework {
                 var runResult = runMethod.Invoke(_instance, new object[] { input });
                 return runResult;
             } catch (Exception e) {
-                throw e.InnerException;
+                ThrowDynamicException(e);
+                return null;
             }
         }
 
@@ -52,7 +55,8 @@ namespace CodingChallenger.Framework {
                 var expectedOutput = expectedOutputMethod.Invoke(_instance, new object[] { });
                 return expectedOutput;
             } catch (Exception e) {
-                throw e.InnerException;
+                ThrowDynamicException(e);
+                return null;
             }
         }
 
@@ -63,6 +67,11 @@ namespace CodingChallenger.Framework {
                 Console.WriteLine($"Challenge {_challenge.Name} has successfully passed");
             }
             Console.ReadLine();
+        }
+
+        private void ThrowDynamicException(Exception e) {
+            var capturedException = ExceptionDispatchInfo.Capture(e);
+            capturedException.Throw();
         }
     }
 }

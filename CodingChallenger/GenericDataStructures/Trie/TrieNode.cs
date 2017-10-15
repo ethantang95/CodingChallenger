@@ -5,16 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.GenericDataStructures.Trie {
-    class TrieNode<T> {
+    class TrieNode<T> where T: class {
         public T Value { get; private set; }
         public TrieNode<T> this[char c] {
             get {
-                if (!char.IsLetter(c)) {
-                    throw new ArgumentException("A trie accessor must be a letter between a-z");
-                }
-
-                c = char.ToLower(c);
-
+                c = GetFirstLetterLower(c.ToString());
                 return _children[c - 97];
             }
         }
@@ -24,8 +19,9 @@ namespace CodingChallenger.GenericDataStructures.Trie {
         private int[] _count;
 
         public TrieNode() {
-            Value = default(T);
+            Value = null;
             _children = new TrieNode<T>[26];
+            _count = new int[26];
         }
 
         public void Add(string key, T value) {
@@ -36,12 +32,7 @@ namespace CodingChallenger.GenericDataStructures.Trie {
                     throw new ArgumentException($"Key already exist for value {value.ToString()}");
                 }
             } else {
-                var c = key[0];
-                if (!char.IsLetter(c)) {
-                    throw new ArgumentException($"Unexpected character {c} from key, the key must all be letters from a-z");
-                }
-
-                c = char.ToLower(c);
+                var c = GetFirstLetterLower(key);
 
                 if (this[c] == null) {
                     _children[c - 97] = new TrieNode<T>();
@@ -53,28 +44,34 @@ namespace CodingChallenger.GenericDataStructures.Trie {
         }
 
         public int GetCountForLetter(char c) {
-            if (!char.IsLetter(c)) {
-                throw new ArgumentException("A trie accessor must be a letter between a-z");
-            }
-
-            c = char.ToLower(c);
-
+            c = GetFirstLetterLower(c.ToString());
             return _count[c - 97];
         }
 
         public T Get(string key) {
+            if (Value != null) {
+                return Value;
+            } else if (string.IsNullOrEmpty(key)) {
+                return null;
+            } else {
+                var c = GetFirstLetterLower(key);
+
+                if (this[c] == null) {
+                    return null;
+                }
+
+                return this[c].Get(key.Substring(1));
+            }
+        }
+
+        public T GetExact(string key) {
             if (string.IsNullOrEmpty(key)) {
                 return Value;
             } else {
-                var c = key[0];
-                if (!char.IsLetter(c)) {
-                    throw new ArgumentException($"Unexpected character {c} from key, the key must all be letters from a-z");
-                }
-
-                c = char.ToLower(c);
+                var c = GetFirstLetterLower(key);
 
                 if (this[c] == null) {
-                    return default(T);
+                    return null;
                 }
 
                 return this[c].Get(key.Substring(1));
@@ -82,15 +79,12 @@ namespace CodingChallenger.GenericDataStructures.Trie {
         }
 
         public bool Contains(string key) {
-            if (string.IsNullOrEmpty(key)) {
-                return Value != null;
+            if (Value != null) {
+                return true;
+            } else if (string.IsNullOrEmpty(key)) {
+                return false;
             } else {
-                var c = key[0];
-                if (!char.IsLetter(c)) {
-                    throw new ArgumentException($"Unexpected character {c} from key, the key must all be letters from a-z");
-                }
-
-                c = char.ToLower(c);
+                var c = GetFirstLetterLower(key);
 
                 if (this[c] == null) {
                     return false;
@@ -98,6 +92,29 @@ namespace CodingChallenger.GenericDataStructures.Trie {
 
                 return this[c].Contains(key.Substring(1));
             }
+        }
+
+        public bool ContainsExact(string key) {
+            if (string.IsNullOrEmpty(key)) {
+                return Value == null;
+            } else {
+                var c = GetFirstLetterLower(key);
+
+                if (this[c] == null) {
+                    return false;
+                }
+
+                return this[c].ContainsExact(key.Substring(1));
+            }
+        }
+
+        private char GetFirstLetterLower(string s) {
+            var c = s[0];
+            if (!char.IsLetter(c)) {
+                throw new ArgumentException($"Unexpected character {c} from key, the key must all be letters from a-z");
+            }
+
+            return char.ToLower(c);
         }
     }
 }
