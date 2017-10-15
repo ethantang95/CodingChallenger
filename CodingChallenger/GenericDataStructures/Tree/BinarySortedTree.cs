@@ -18,27 +18,6 @@ namespace CodingChallenger.GenericDataStructures.Tree {
         }
 
         public override bool RemoveFromTree(T value) {
-            //check parent first
-            if (value.CompareTo(Root.Value) == 0) {
-                var node = RightSideMin(Root);
-                if (node == null) {
-                    Root = Root.LeftChild;
-                    Root.Parent = null;
-                    return true;
-                } else {
-                    var children = node.RightChild;
-                    node.LeftChild = Root.LeftChild;
-                    node.RightChild = Root.RightChild;
-                    Root = node;
-                    if (!children.Value.Equals(Root.RightChild.Value)) {
-                        Root.Parent.LeftChild = children;
-                        children.Parent = Root.Parent;
-                    }
-                    Root.Parent = null;
-                }
-                return true;
-            }
-
             return RecursiveRemoveFromTree(Root, value);
         }
 
@@ -91,32 +70,11 @@ namespace CodingChallenger.GenericDataStructures.Tree {
         }
 
         private bool RecursiveRemoveFromTree(BinaryTreeNode<T> node, T value) {
-            var comparison = value.CompareTo(node.Value);
-
-            if (comparison == 0) {
-                RemoveNode(node, node.Parent.LeftChild.Value.Equals(value));
-            }
-
             throw new NotImplementedException();
         }
 
         private void RemoveNode(BinaryTreeNode<T> toRemove, bool isLeftChild) {
-            var parent = toRemove.Parent;
-            var node = RightSideMin(toRemove);
-            if (node == null) {
-                Root = toRemove.LeftChild;
-                Root.Parent = null;
-            } else {
-                var children = node.RightChild;
-                node.LeftChild = Root.LeftChild;
-                node.RightChild = Root.RightChild;
-                Root = node;
-                if (!children.Value.Equals(Root.RightChild.Value)) {
-                    Root.Parent.LeftChild = children;
-                    children.Parent = Root.Parent;
-                }
-                Root.Parent = null;
-            }
+            throw new NotImplementedException(); 
         }
 
         private BinaryTreeNode<T> RightSideMin(BinaryTreeNode<T> node) {
