@@ -10,7 +10,7 @@ namespace CodingChallenger.Challenges {
     /// This is probably an NP complete solution, because we have to find all the sums that adds up to the candidate...
     /// The idea of this is to just simulate a stack when adding values into it
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class CombinationalSum : IChallenge<CombinationalSumEntry, IList<IList<int>>> {
         public IList<IList<int>> ExpectedOutput() {
             var ans = new List<IList<int>>();
@@ -49,11 +49,13 @@ namespace CodingChallenger.Challenges {
                 if (result == 0) {
                     _answers.Add(chain.ToList());
                     chain.Pop();
+                    return;
                 } else if (result > 0) {
                     FindNext(chain, candidates, i, result);
                     chain.Pop();
                 } else if (result < 0) {
                     chain.Pop();
+                    return;
                 }
             }
         }

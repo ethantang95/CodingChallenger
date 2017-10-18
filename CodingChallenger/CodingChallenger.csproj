@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Challenges\BaseballGame.cs" />
+    <Compile Include="Challenges\BinaryTreeSerializeDeserialize.cs" />
     <Compile Include="Challenges\BSTDeleteNode.cs" />
     <Compile Include="Challenges\CanPermutePalindrome.cs" />
     <Compile Include="Challenges\CombinationalSum.cs" />
