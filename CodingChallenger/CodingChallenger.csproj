@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Challenges\AddTwoNumbers.cs" />
     <Compile Include="Challenges\BaseballGame.cs" />
     <Compile Include="Challenges\BinaryTreeSerializeDeserialize.cs" />
     <Compile Include="Challenges\BSTDeleteNode.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Challenges\GenerateParentheses.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\LongestPalindromeSubstring.cs" />
+    <Compile Include="Challenges\LongestSubstringWithoutRepeatChar.cs" />
     <Compile Include="Challenges\MergeKLists.cs" />
     <Compile Include="Challenges\MinimumIndexSumOfTwoLists.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />

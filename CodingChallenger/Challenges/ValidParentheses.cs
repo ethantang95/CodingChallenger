@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
-    [Challenge(Challenge.NotDone)]
     /// <summary>
     /// Basically a problem using stacks. I used the ascii table as a way to not write too much if and else statements
     /// </summary>
+    [Challenge(Challenge.Done)]
     class ValidParentheses : IChallenge<string, bool> {
         public bool ExpectedOutput() {
             return false;
