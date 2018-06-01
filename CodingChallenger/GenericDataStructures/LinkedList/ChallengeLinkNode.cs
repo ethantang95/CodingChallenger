@@ -12,6 +12,20 @@ namespace CodingChallenger.GenericDataStructures.LinkedList {
             val = x;
         }
 
+        public static ChallengeLinkNode FromInts(params int[] ints) {
+            return FromInts(ints);
+        }
+
+        public static ChallengeLinkNode FromInts(IEnumerable<int> ints) {
+            var root = new ChallengeLinkNode(0);
+            var pointer = root;
+            foreach (var val in ints) {
+                pointer.next = new ChallengeLinkNode(val);
+                pointer = pointer.next;
+            }
+            return root.next;
+        }
+
         public override bool Equals(object obj) {
             if (obj.GetType() != GetType()) {
                 return false;
