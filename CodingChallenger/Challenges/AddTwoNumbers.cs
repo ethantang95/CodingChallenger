@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     ///<summary>
     ///Just treat this like how you do normal addition... always be aware of the carry
     ///Iterative through the array is usually the best solution

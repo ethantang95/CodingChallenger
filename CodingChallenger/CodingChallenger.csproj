@@ -58,6 +58,7 @@
     <Compile Include="Challenges\MinimumIndexSumOfTwoLists.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />
     <Compile Include="Challenges\RandomSet.cs" />
+    <Compile Include="Challenges\ReconstructItinerary.cs" />
     <Compile Include="Challenges\ReplaceWords.cs" />
     <Compile Include="Challenges\RomanToInteger.cs" />
     <Compile Include="Challenges\ShortestPalindrome.cs" />
