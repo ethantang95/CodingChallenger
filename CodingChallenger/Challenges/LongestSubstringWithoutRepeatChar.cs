@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.DoNotRun)]
     class LongestSubstringWithoutRepeatChar : IChallenge<string, int> {
         public int ExpectedOutput() {
             return 1;

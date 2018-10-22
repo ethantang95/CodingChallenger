@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
-    [Challenge(Challenge.Done)]
     ///<summary>
     ///Just treat this like how you do normal addition... always be aware of the carry
     ///Iterative through the array is usually the best solution
     /// </summary>
+    [Challenge(Challenge.Done)]
     class AddTwoNumbers : IChallenge<Tuple<ChallengeLinkNode, ChallengeLinkNode>, ChallengeLinkNode> {
         public ChallengeLinkNode ExpectedOutput() {
             var result = new ChallengeLinkNode(8);

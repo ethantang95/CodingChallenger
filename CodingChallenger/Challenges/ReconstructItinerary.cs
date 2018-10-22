@@ -19,7 +19,7 @@ namespace CodingChallenger.Challenges {
     /// What is interesting from this challenge though is that what is created is essentially an Eulerian path, meaning that every edge is visited once
     /// 
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.DoNotRun)]
     class ReconstructItinerary : IChallenge<string[,], IList<string>> {
         public IList<string> ExpectedOutput() {
             var iterList = new List<string>(new string[] { "JFK", "ATL", "JFK", "SFO", "ATL", "SFO" });
