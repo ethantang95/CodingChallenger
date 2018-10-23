@@ -48,6 +48,7 @@
     <Compile Include="Challenges\BinaryTreeSerializeDeserialize.cs" />
     <Compile Include="Challenges\BSTDeleteNode.cs" />
     <Compile Include="Challenges\CanPermutePalindrome.cs" />
+    <Compile Include="Challenges\CoinChange.cs" />
     <Compile Include="Challenges\CombinationalSum.cs" />
     <Compile Include="Challenges\FactorCombination.cs" />
     <Compile Include="Challenges\GenerateParentheses.cs" />
