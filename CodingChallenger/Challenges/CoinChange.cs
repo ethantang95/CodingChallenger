@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// really the answer is min(value - coin[n]). This is then a recursive subproblem
     /// The base case is that if value == coin[n], then value = 1
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class CoinChange : IChallenge<Tuple<int[], int>, int> {
         public int ExpectedOutput() {
             return 3;
