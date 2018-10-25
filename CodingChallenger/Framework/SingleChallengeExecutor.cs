@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ExceptionServices;
@@ -63,7 +64,18 @@ namespace CodingChallenger.Framework {
         private void CheckIfEquals(object output, object expectedOutput) {
             if (!expectedOutput.Equals(output)) {
                 Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
-                Console.WriteLine($"output is {output}, expected output is {expectedOutput}");
+                if (output is IEnumerable) {
+                    Console.WriteLine("outputs are:");
+                    foreach (var entry in output as IEnumerable) {
+                        Console.WriteLine(entry.ToString());
+                    }
+                    Console.WriteLine("Expected outputs are:");
+                    foreach (var entry in expectedOutput as IEnumerable) {
+                        Console.WriteLine(entry.ToString());
+                    }
+                } else {
+                    Console.WriteLine($"output is {output}, expected output is {expectedOutput}");
+                }
             } else {
                 Console.WriteLine($"Challenge {_challenge.Name} has successfully passed");
             }
