@@ -9,7 +9,7 @@ namespace CodingChallenger.Challenges {
     /// <summary>
     /// Kadane's, read it
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class MaxSubArray : IChallenge<int[], int> {
         public int ExpectedOutput() {
             return 6;
