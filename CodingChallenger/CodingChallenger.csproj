@@ -72,6 +72,7 @@
     <Compile Include="Challenges\ReplaceWords.cs" />
     <Compile Include="Challenges\RomanToInteger.cs" />
     <Compile Include="Challenges\ShortestPalindrome.cs" />
+    <Compile Include="Challenges\TaskScheduler.cs" />
     <Compile Include="Challenges\ValidParentheses.cs" />
     <Compile Include="Framework\ChallengeAttribute.cs" />
     <Compile Include="Framework\ChallengerRunner.cs" />
