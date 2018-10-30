@@ -62,25 +62,10 @@ namespace CodingChallenger.Framework {
         }
 
         private void CheckIfEquals(object output, object expectedOutput) {
-            if (output is IEnumerable) {
-                foreach (var entries in (output as IEnumerable<object>).Zip((expectedOutput as IEnumerable<object>), Tuple.Create)) {
-                    var outputEntry = entries.Item1;
-                    var expectedOutputEntry = entries.Item2;
-                    if (!expectedOutputEntry.Equals(outputEntry)) {
-                        Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
-                        Console.WriteLine("outputs are:");
-                        foreach (var entry in output as IEnumerable) {
-                            Console.WriteLine(entry.ToString());
-                        }
-                        Console.WriteLine("Expected outputs are:");
-                        foreach (var entry in expectedOutput as IEnumerable) {
-                            Console.WriteLine(entry.ToString());
-                        }
-                        Console.ReadLine();
-                        return;
-                    }
-                }
-                Console.WriteLine($"Challenge {_challenge.Name} has successfully passed");
+            if (output is IEnumerable<int>) {
+                OutputEnumerables(output as IEnumerable<int>, expectedOutput as IEnumerable<int>);
+            } else if (output is IEnumerable<object>) {
+                OutputEnumerables(output as IEnumerable<object>, expectedOutput as IEnumerable<object>);
             } else {
                 if (!expectedOutput.Equals(output)) {
                     Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
@@ -90,6 +75,27 @@ namespace CodingChallenger.Framework {
                 }
             }
             Console.ReadLine();
+        }
+
+        private void OutputEnumerables<T>(IEnumerable<T> output, IEnumerable<T> expectedOutput) {
+            foreach (var entries in output.Zip(expectedOutput, Tuple.Create)) {
+                var outputEntry = entries.Item1;
+                var expectedOutputEntry = entries.Item2;
+                if (!expectedOutputEntry.Equals(outputEntry)) {
+                    Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
+                    Console.WriteLine("outputs are:");
+                    foreach (var entry in output as IEnumerable) {
+                        Console.WriteLine(entry.ToString());
+                    }
+                    Console.WriteLine("Expected outputs are:");
+                    foreach (var entry in expectedOutput as IEnumerable) {
+                        Console.WriteLine(entry.ToString());
+                    }
+                    Console.ReadLine();
+                    return;
+                }
+            }
+            Console.WriteLine($"Challenge {_challenge.Name} has successfully passed");
         }
 
         private void ThrowDynamicException(Exception e) {
