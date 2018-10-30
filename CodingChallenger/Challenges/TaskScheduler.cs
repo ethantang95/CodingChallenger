@@ -10,7 +10,7 @@ namespace CodingChallenger.Challenges {
     /// Yes it can be a priority queue question which can be done in O(nlogn) but really it can also be a counting question
     /// where the limitation is based on the most frequent task
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class TaskScheduler : IChallenge<Tuple<char[], int>, int> {
         public int ExpectedOutput() {
             return 16;

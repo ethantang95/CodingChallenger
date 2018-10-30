@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Challenges\AddTwoNumbers.cs" />
+    <Compile Include="Challenges\FruitTree.cs" />
     <Compile Include="Challenges\BaseballGame.cs" />
     <Compile Include="Challenges\BestTimeToBuyStocks.cs" />
     <Compile Include="Challenges\BinaryTreeSerializeDeserialize.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Challenges\ShortestPalindrome.cs" />
     <Compile Include="Challenges\TaskScheduler.cs" />
     <Compile Include="Challenges\ValidParentheses.cs" />
+    <Compile Include="Challenges\VerifyPreorderSeralizationOfBinaryTree.cs" />
     <Compile Include="Framework\ChallengeAttribute.cs" />
     <Compile Include="Framework\ChallengerRunner.cs" />
     <Compile Include="Framework\IChallenge.cs" />
