@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// Merged is just the min of both and the max of both
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MergeIntervals : IChallenge<IList<Interval>, IList<Interval>> {
+    class MergeIntervals : IChallenge<IList<MergeIntervals.Interval>, IList<MergeIntervals.Interval>> {
         public IList<Interval> ExpectedOutput() {
             var intervals = new List<Interval> {
                 new Interval(1, 5)
@@ -61,19 +61,19 @@ namespace CodingChallenger.Challenges {
         private bool Overlap(Interval a, Interval b) {
             return b.start <= a.end;
         }
-    }
 
-    public class Interval {
-        public int start;
-        public int end;
-        public Interval() { start = 0; end = 0; }
-        public Interval(int s, int e) { start = s; end = e; }
-        public override bool Equals(object obj) {
-            var o = obj as Interval;
-            return o.start == start && o.end == end;
-        }
-        public override string ToString() {
-            return $"[{start}, {end}]";
+        public class Interval {
+            public int start;
+            public int end;
+            public Interval() { start = 0; end = 0; }
+            public Interval(int s, int e) { start = s; end = e; }
+            public override bool Equals(object obj) {
+                var o = obj as Interval;
+                return o.start == start && o.end == end;
+            }
+            public override string ToString() {
+                return $"[{start}, {end}]";
+            }
         }
     }
 }

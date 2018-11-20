@@ -65,7 +65,9 @@
     <Compile Include="Challenges\MergeKLists.cs" />
     <Compile Include="Challenges\MinimumIndexSumOfTwoLists.cs" />
     <Compile Include="Challenges\MinimumWindowSubstring.cs" />
+    <Compile Include="Challenges\NonOverlappingIntervals.cs" />
     <Compile Include="Challenges\NumberOfIslands.cs" />
+    <Compile Include="Challenges\NumPlaindrome.cs" />
     <Compile Include="Challenges\ProductOfArrayExceptSelf.cs" />
     <Compile Include="Challenges\RandomCollection.cs" />
     <Compile Include="Challenges\RandomSet.cs" />
