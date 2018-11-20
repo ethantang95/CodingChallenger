@@ -78,24 +78,33 @@ namespace CodingChallenger.Framework {
         }
 
         private void OutputEnumerables<T>(IEnumerable<T> output, IEnumerable<T> expectedOutput) {
+            if (output.Count() != expectedOutput.Count()) {
+                PrintBadEnumerableOutput(output, expectedOutput);
+                return;
+            }
             foreach (var entries in output.Zip(expectedOutput, Tuple.Create)) {
                 var outputEntry = entries.Item1;
                 var expectedOutputEntry = entries.Item2;
                 if (!expectedOutputEntry.Equals(outputEntry)) {
-                    Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
-                    Console.WriteLine("outputs are:");
-                    foreach (var entry in output as IEnumerable) {
-                        Console.WriteLine(entry.ToString());
-                    }
-                    Console.WriteLine("Expected outputs are:");
-                    foreach (var entry in expectedOutput as IEnumerable) {
-                        Console.WriteLine(entry.ToString());
-                    }
-                    Console.ReadLine();
+                    PrintBadEnumerableOutput(output, expectedOutput);
                     return;
                 }
             }
             Console.WriteLine($"Challenge {_challenge.Name} has successfully passed");
+        }
+
+        private void PrintBadEnumerableOutput<T>(IEnumerable<T> output, IEnumerable<T> expectedOutput) {
+            Console.WriteLine($"output and expected output are not the same for challenge {_challenge.Name}, please debug");
+            Console.WriteLine("outputs are:");
+            foreach (var entry in output as IEnumerable) {
+                Console.WriteLine(entry.ToString());
+            }
+            Console.WriteLine("Expected outputs are:");
+            foreach (var entry in expectedOutput as IEnumerable) {
+                Console.WriteLine(entry.ToString());
+            }
+            Console.ReadLine();
+            return;
         }
 
         private void ThrowDynamicException(Exception e) {

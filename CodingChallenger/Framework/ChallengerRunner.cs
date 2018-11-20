@@ -17,6 +17,8 @@ namespace CodingChallenger.Framework {
                 if (challengeAttribute.ChallengeStatus == Challenge.NotDone) {
                     var executor = new SingleChallengeExecutor(challengeType);
                     executor.Run();
+                } else if (challengeAttribute.ChallengeStatus == Challenge.DoNotRun) {
+                    Console.WriteLine($"Challenge {challengeType.Name} is set to do not run");
                 }
             }
             Console.WriteLine("All challenges has finished running");

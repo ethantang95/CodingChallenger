@@ -26,7 +26,7 @@ namespace CodingChallenger.Challenges {
             var dict = input.Dict;
             var sentence = input.Sentence;
 
-            var trie = new TrieNode<string>();
+            var trie = new TrieNodeMap<string>();
             foreach (var entry in dict) {
                 trie.Add(entry, entry);
             }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.GenericDataStructures.Trie {
-    class TrieNode<T> where T: class {
+    class TrieNodeMap<T> where T: class {
         public T Value { get; private set; }
-        public TrieNode<T> this[char c] {
+        public TrieNodeMap<T> this[char c] {
             get {
                 c = GetFirstLetterLower(c.ToString());
                 return _children[c - 97];
@@ -15,12 +15,12 @@ namespace CodingChallenger.GenericDataStructures.Trie {
         }
         public int TotalCount { get { return _count.Sum(); } }
 
-        public TrieNode<T>[] _children;
+        public TrieNodeMap<T>[] _children;
         private int[] _count;
 
-        public TrieNode() {
+        public TrieNodeMap() {
             Value = null;
-            _children = new TrieNode<T>[26];
+            _children = new TrieNodeMap<T>[26];
             _count = new int[26];
         }
 
@@ -35,7 +35,7 @@ namespace CodingChallenger.GenericDataStructures.Trie {
                 var c = GetFirstLetterLower(key);
 
                 if (this[c] == null) {
-                    _children[c - 97] = new TrieNode<T>();
+                    _children[c - 97] = new TrieNodeMap<T>();
                 }
                 _count[c - 97]++;
 
@@ -76,6 +76,10 @@ namespace CodingChallenger.GenericDataStructures.Trie {
 
                 return this[c].Get(key.Substring(1));
             }
+        }
+
+        public IEnumerable<TrieNodeMap<T>> GetNodes() {
+            return _children.Where(s => s != null);
         }
 
         public bool Contains(string key) {

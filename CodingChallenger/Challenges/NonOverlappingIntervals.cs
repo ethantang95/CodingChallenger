@@ -19,7 +19,7 @@ namespace CodingChallenger.Challenges {
     /// within our current interval and therefore is smaller... since it is smaller, this can potentially fit more
     /// other intervals
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class NonOverlappingIntervals : IChallenge<NonOverlappingIntervals.Interval[], int> {
         public int ExpectedOutput() {
             return 2;

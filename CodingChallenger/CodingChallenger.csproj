@@ -79,6 +79,7 @@
     <Compile Include="Challenges\TaskScheduler.cs" />
     <Compile Include="Challenges\ValidParentheses.cs" />
     <Compile Include="Challenges\VerifyPreorderSeralizationOfBinaryTree.cs" />
+    <Compile Include="Challenges\WordSearchII.cs" />
     <Compile Include="Framework\ChallengeAttribute.cs" />
     <Compile Include="Framework\ChallengerRunner.cs" />
     <Compile Include="Framework\IChallenge.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="GenericDataStructures\Tree\BinaryTreeAbstract.cs" />
     <Compile Include="GenericDataStructures\Tree\BinaryTreeNode.cs" />
     <Compile Include="GenericDataStructures\Tree\ChallengeTreeNode.cs" />
-    <Compile Include="GenericDataStructures\Trie\TrieNode.cs" />
+    <Compile Include="GenericDataStructures\Trie\TrieNodeMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestChallenges\AddChallenge.cs" />
