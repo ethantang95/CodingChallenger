@@ -57,6 +57,7 @@
     <Compile Include="Challenges\GenerateParentheses.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\JumbledWord.cs" />
+    <Compile Include="Challenges\JumpGame.cs" />
     <Compile Include="Challenges\KEmptySlots.cs" />
     <Compile Include="Challenges\LongestPalindromeSubstring.cs" />
     <Compile Include="Challenges\LongestSubstringWithoutRepeatChar.cs" />
