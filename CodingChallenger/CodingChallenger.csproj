@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Challenges\AddTwoNumbers.cs" />
+    <Compile Include="Challenges\FindDuplicate.cs" />
     <Compile Include="Challenges\FruitTree.cs" />
     <Compile Include="Challenges\BaseballGame.cs" />
     <Compile Include="Challenges\BestTimeToBuyStocks.cs" />
