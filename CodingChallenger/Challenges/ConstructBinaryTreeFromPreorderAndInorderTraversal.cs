@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
+    /// <summary>
+    /// basically, the frst value of the preorder is the root, and the inorder will bisect it between the left and right subtree
+    /// This can then be recurisvely be done to construct the tree
+    /// </summary>
     [Challenge(Challenge.Done)]
     class ConstructBinaryTreeFromPreorderAndInorderTraversal : IChallenge<Tuple<int[], int[]>, ChallengeTreeNode> {
         public ChallengeTreeNode ExpectedOutput() {
