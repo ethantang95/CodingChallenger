@@ -47,6 +47,7 @@
     <Compile Include="Challenges\ConstructBinaryTreeFromPreorderAndInorderTraversal.cs" />
     <Compile Include="Challenges\DecodeWays.cs" />
     <Compile Include="Challenges\DecodeWaysII.cs" />
+    <Compile Include="Challenges\EditDistance.cs" />
     <Compile Include="Challenges\FindDuplicate.cs" />
     <Compile Include="Challenges\FruitTree.cs" />
     <Compile Include="Challenges\BaseballGame.cs" />
