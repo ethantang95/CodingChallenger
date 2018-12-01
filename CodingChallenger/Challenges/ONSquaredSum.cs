@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class ONSquaredSum : IChallenge<int, long> {
         public long ExpectedOutput() {
             return 100000L * 100001 / 2;
