@@ -1,4 +1,5 @@
-﻿using CodingChallenger.Framework;
+﻿using CodingChallenger.Framework.ChallengeExecutor;
+using CodingChallenger.Framework.ChallengeInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,7 @@ namespace CodingChallenger.Framework {
             foreach (var challengeType in challengeTypes) {
                 var challengeAttribute = GetChallengeAttribute(challengeType);
                 if (challengeAttribute.ChallengeStatus == Challenge.NotDone) {
-                    var executor = new SingleChallengeExecutor(challengeType);
-                    executor.Run();
+                    RunChallenge(challengeType);
                 } else if (challengeAttribute.ChallengeStatus == Challenge.DoNotRun) {
                     Console.WriteLine($"Challenge {challengeType.Name} is set to do not run");
                 }
@@ -46,6 +46,16 @@ namespace CodingChallenger.Framework {
         private ChallengeAttribute GetChallengeAttribute(Type type) {
             var challengeAttribute = type.GetCustomAttributes(typeof(ChallengeAttribute), true);
             return challengeAttribute.Length > 0 ? challengeAttribute[0] as ChallengeAttribute: new ChallengeAttribute(Challenge.AttributeNotUsed);
+        }
+
+        private void RunChallenge(Type challengeType) {
+            if (DoesTypeSupportInterface(challengeType, typeof(IChallengeModifyInput<,>))) {
+                var executor = new ModifyInputChallengeExecutor(challengeType);
+                executor.Run();
+            } else {
+                var executor = new SimpleChallengeExecutor(challengeType);
+                executor.Run();
+            }
         }
     }
 }

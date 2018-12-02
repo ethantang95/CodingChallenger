@@ -1,4 +1,5 @@
 ﻿using CodingChallenger.Framework;
+using CodingChallenger.Framework.ChallengeInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
