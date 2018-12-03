@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.DoNotRun)]
-    class LongestSubstringWithoutRepeatChar : IChallenge<string, int> {
+    class LongestSubstringWithoutRepeatChar : ISimpleChallenge<string, int> {
         public int ExpectedOutput() {
             return 1;
         }

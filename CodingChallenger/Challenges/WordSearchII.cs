@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// Next to that, it is just using DFS search with a trie keeping track of what to search for.
     /// </summary>
     [Challenge(Challenge.Done)]
-    class WordSearchII : IChallenge<Tuple<char[,], string[]>, List<string>> {
+    class WordSearchII : ISimpleChallenge<Tuple<char[,], string[]>, List<string>> {
         public List<string> ExpectedOutput() {
             return new List<string> { "aaa", "aaab", "aaba", "aba", "baa" };
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class NumPlaindrome : IChallenge<string, int> {
+    class NumPlaindrome : ISimpleChallenge<string, int> {
         public int ExpectedOutput() {
             return 3;
         }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Framework.ChallengeInterface {
-    interface IChallengeModifyInput<TInput, TOutput> : IChallenge<TInput, TOutput> {
+    interface IChallengeModifyInput<TInput, TOutput> : ISimpleChallenge<TInput, TOutput> {
         TInput ExpectedModifiedInput();
         bool AssertResult(TInput expected, TInput actual, TOutput output);
     }

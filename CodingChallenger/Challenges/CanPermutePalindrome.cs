@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// also to know about the properties of the palindrome
     /// </summary>
     [Challenge(Challenge.Done)]
-    class CanPermutePalindrome : IChallenge<string, bool> {
+    class CanPermutePalindrome : ISimpleChallenge<string, bool> {
         public bool ExpectedOutput() {
             return false;
         }

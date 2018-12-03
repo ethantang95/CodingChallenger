@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class FruitTree : IChallenge<int[], int> {
+    class FruitTree : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 7;
         }

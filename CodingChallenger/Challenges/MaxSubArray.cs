@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Kadane's, read it
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MaxSubArray : IChallenge<int[], int> {
+    class MaxSubArray : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 6;
         }

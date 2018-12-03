@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// For some reason, BFS in C# is a lot slower than DFS where leetcode will time out. That I don't know why
     /// </summary>
     [Challenge(Challenge.Done)]
-    class NumberOfIslands : IChallenge<char[,], int> {
+    class NumberOfIslands : ISimpleChallenge<char[,], int> {
         public int ExpectedOutput() {
             return 1;
         }

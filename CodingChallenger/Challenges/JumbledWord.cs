@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.DoNotRun)]
-    class JumbledWord : IChallenge<Tuple<string, string>, bool> {
+    class JumbledWord : ISimpleChallenge<Tuple<string, string>, bool> {
         public bool ExpectedOutput() {
             return true;
         }

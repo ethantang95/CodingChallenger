@@ -19,7 +19,7 @@ namespace CodingChallenger.Challenges {
     /// Both solution uses O(n) runtime
     /// </summary>
     [Challenge(Challenge.Done)]
-    class HappyNumber : IChallenge<int, bool> {
+    class HappyNumber : ISimpleChallenge<int, bool> {
         public bool ExpectedOutput() {
             return true;
         }

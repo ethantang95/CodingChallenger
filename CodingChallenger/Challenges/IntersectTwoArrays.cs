@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Hash tables
     /// </summary>
     [Challenge(Challenge.Done)]
-    class IntersectTwoArrays : IChallenge<(int[] num1, int[] num2), int[]> {
+    class IntersectTwoArrays : ISimpleChallenge<(int[] num1, int[] num2), int[]> {
         public int[] ExpectedOutput() {
             return new int[] { 9, 4 };
         }

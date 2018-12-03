@@ -13,7 +13,7 @@ namespace CodingChallenger.Challenges {
     /// Merged is just the min of both and the max of both
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MergeIntervals : IChallenge<IList<MergeIntervals.Interval>, IList<MergeIntervals.Interval>> {
+    class MergeIntervals : ISimpleChallenge<IList<MergeIntervals.Interval>, IList<MergeIntervals.Interval>> {
         public IList<Interval> ExpectedOutput() {
             var intervals = new List<Interval> {
                 new Interval(1, 5)

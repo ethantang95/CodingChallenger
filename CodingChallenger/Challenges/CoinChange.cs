@@ -16,7 +16,7 @@ namespace CodingChallenger.Challenges {
     /// The base case is that if value == coin[n], then value = 1
     /// </summary>
     [Challenge(Challenge.Done)]
-    class CoinChange : IChallenge<Tuple<int[], int>, int> {
+    class CoinChange : ISimpleChallenge<Tuple<int[], int>, int> {
         public int ExpectedOutput() {
             return 3;
         }

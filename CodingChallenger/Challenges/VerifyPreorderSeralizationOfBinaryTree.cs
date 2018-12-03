@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// the # not only represent nulls but also nodes we "prune" because we visited them before
     /// </summary>
     [Challenge(Challenge.Done)]
-    class VerifyPreorderSeralizationOfBinaryTree : IChallenge<string, bool> {
+    class VerifyPreorderSeralizationOfBinaryTree : ISimpleChallenge<string, bool> {
         public bool ExpectedOutput() {
             return true;
         }

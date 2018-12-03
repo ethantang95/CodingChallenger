@@ -94,9 +94,10 @@
     <Compile Include="Challenges\WordSearchII.cs" />
     <Compile Include="Framework\ChallengeAttribute.cs" />
     <Compile Include="Framework\ChallengeExecutor\ChallengeExecutorAbstract.cs" />
+    <Compile Include="Framework\ChallengeInterface\IChallenge.cs" />
     <Compile Include="Framework\ChallengeInterface\IChallengeModifyInput.cs" />
     <Compile Include="Framework\ChallengerRunner.cs" />
-    <Compile Include="Framework\ChallengeInterface\IChallenge.cs" />
+    <Compile Include="Framework\ChallengeInterface\ISimpleChallenge.cs" />
     <Compile Include="Framework\ChallengeExecutor\ModifyInputChallengeExecutor.cs" />
     <Compile Include="Framework\ChallengeExecutor\SimpleChallengeExecutor.cs" />
     <Compile Include="GenericDataStructures\LinkedList\ChallengeLinkNode.cs" />

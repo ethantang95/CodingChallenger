@@ -12,7 +12,7 @@ namespace CodingChallenger.Framework {
         public ChallengerRunner() { }
 
         public void Run() {
-            var challengeTypes = TypesImplementingInterface(typeof(IChallenge<,>));
+            var challengeTypes = TypesImplementingInterface(typeof(IChallenge));
             foreach (var challengeType in challengeTypes) {
                 var challengeAttribute = GetChallengeAttribute(challengeType);
                 if (challengeAttribute.ChallengeStatus == Challenge.NotDone) {

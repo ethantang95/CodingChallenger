@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// Best to think of it from a use case scenario and come up with all the possible cases of deleting a node
     /// </summary>
     [Challenge(Challenge.Done)]
-    class BSTDeleteNode : IChallenge<NodeAndVal, ChallengeTreeNode> {
+    class BSTDeleteNode : ISimpleChallenge<NodeAndVal, ChallengeTreeNode> {
         public ChallengeTreeNode ExpectedOutput() {
             var root = TreeMaker.MakeTreeFromString("27,17,33,15,26,32,45,7,16,23,null,31,null,40,48,5,14,null,null,21,25,29,null,34,41,46,null,2,6,10,null,20,22,24,null,28,30,null,39,null,42,null,47,1,4,null,null,9,11,18,null,null,null,null,null,null,null,null,null,37,null,null,44,null,null,0,null,3,null,8,null,null,13,null,19,35,38,43,null,null,null,null,null,null,null,12,null,null,null,null,36");
             return root;

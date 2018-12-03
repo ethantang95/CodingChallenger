@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class CourseMaterials : IChallenge<List<CourseEntry>, List<string>> {
+    class CourseMaterials : ISimpleChallenge<List<CourseEntry>, List<string>> {
         public List<string> ExpectedOutput() {
             return new List<string> {
                 "US History",

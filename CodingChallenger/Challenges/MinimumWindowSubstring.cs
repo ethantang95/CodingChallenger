@@ -30,7 +30,7 @@ namespace CodingChallenger.Challenges {
     /// This is ran until the entire string has been iterated through
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MinimumWindowSubstring : IChallenge<Tuple<string, string>, string> {
+    class MinimumWindowSubstring : ISimpleChallenge<Tuple<string, string>, string> {
         public string ExpectedOutput() {
             return "aec";
         }

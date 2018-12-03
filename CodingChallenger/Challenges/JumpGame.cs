@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Greedy, take the jump if it is higher... also watch out for end conditions
     /// </summary>
     [Challenge(Challenge.Done)]
-    class JumpGame : IChallenge<int[], bool> {
+    class JumpGame : ISimpleChallenge<int[], bool> {
         public bool ExpectedOutput() {
             return false;
         }

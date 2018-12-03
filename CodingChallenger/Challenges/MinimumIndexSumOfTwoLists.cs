@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// with a hash table to keep track of stuff
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MinimumIndexSumOfTwoLists : IChallenge<Tuple<string[], string[]>, string[]> {
+    class MinimumIndexSumOfTwoLists : ISimpleChallenge<Tuple<string[], string[]>, string[]> {
         public string[] ExpectedOutput() {
             return new string[] { "Shogun" };
         }

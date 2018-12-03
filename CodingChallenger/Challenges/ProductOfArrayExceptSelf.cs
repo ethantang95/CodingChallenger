@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Divide this into 2 triangles and do cascading multiplication
     /// </summary>
     [Challenge(Challenge.Done)]
-    class ProductOfArrayExceptSelf : IChallenge<int[], int[]> {
+    class ProductOfArrayExceptSelf : ISimpleChallenge<int[], int[]> {
         public int[] ExpectedOutput() {
             return new int[] { 24, 12, 8, 6 };
         }

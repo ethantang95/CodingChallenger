@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CodingChallenger.Framework.ChallengeInterface {
-    interface IChallenge {
+    interface ISimpleChallenge <TInput, TOutput> : IChallenge {
+        TInput Input();
+        TOutput ExpectedOutput();
+        TOutput Run(TInput input);
     }
 }

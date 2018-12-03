@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class ONSquaredSum : IChallenge<int, long> {
+    class ONSquaredSum : ISimpleChallenge<int, long> {
         public long ExpectedOutput() {
             return 100000L * 100001 / 2;
         }

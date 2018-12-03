@@ -13,7 +13,7 @@ namespace CodingChallenger.Challenges {
     /// is dependent on the results generated from the previous number
     /// </summary>
     [Challenge(Challenge.Done)]
-    class DecodeWays : IChallenge<string, int> {
+    class DecodeWays : ISimpleChallenge<string, int> {
         public int ExpectedOutput() {
             return 2;
         }

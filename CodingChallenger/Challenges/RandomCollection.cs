@@ -19,7 +19,7 @@ namespace CodingChallenger.Challenges {
     /// to occupy the same index.
     /// </summary>
     [Challenge(Challenge.Done)]
-    public class RandomCollection : IChallenge<int, IEnumerable<string>> {
+    public class RandomCollection : ISimpleChallenge<int, IEnumerable<string>> {
 
 
         public IEnumerable<string> ExpectedOutput() {

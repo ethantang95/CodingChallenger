@@ -21,7 +21,7 @@ namespace CodingChallenger.Challenges {
     /// other intervals
     /// </summary>
     [Challenge(Challenge.Done)]
-    class NonOverlappingIntervals : IChallenge<NonOverlappingIntervals.Interval[], int> {
+    class NonOverlappingIntervals : ISimpleChallenge<NonOverlappingIntervals.Interval[], int> {
         public int ExpectedOutput() {
             return 2;
         }

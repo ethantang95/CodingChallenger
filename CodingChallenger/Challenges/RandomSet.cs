@@ -18,7 +18,7 @@ namespace CodingChallenger.Challenges {
     /// in O(1) time
     /// </summary>
     [Challenge(Challenge.Done)]
-    public class RandomSet : IChallenge<int, IEnumerable<string>> {
+    public class RandomSet : ISimpleChallenge<int, IEnumerable<string>> {
 
         public IEnumerable<string> ExpectedOutput() {
             return new List<string>(new string[] { "true", "false", "true", "2", "true", "false", "2" });

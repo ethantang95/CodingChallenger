@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class EditDistance : IChallenge<Tuple<string, string>, int> {
+    class EditDistance : ISimpleChallenge<Tuple<string, string>, int> {
         public int ExpectedOutput() {
             return 10;
         }

@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// Use a trie... this is a very simple prefix trie problem
     /// </summary>
     [Challenge(Challenge.Done)]
-    class ReplaceWords : IChallenge<StringAndWordList, string> {
+    class ReplaceWords : ISimpleChallenge<StringAndWordList, string> {
         public string ExpectedOutput() {
             return "the cat was rat by the bat";
         }

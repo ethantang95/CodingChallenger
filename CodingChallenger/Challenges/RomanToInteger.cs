@@ -13,7 +13,7 @@ namespace CodingChallenger.Challenges {
     /// else it is an addition
     /// </summary>
     [Challenge(Challenge.Done)]
-    class RomanToInteger : IChallenge<string, int> {
+    class RomanToInteger : ISimpleChallenge<string, int> {
 
         Dictionary<char, int> _romanTable;
 

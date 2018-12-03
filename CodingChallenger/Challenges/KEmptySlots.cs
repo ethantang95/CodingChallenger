@@ -22,7 +22,7 @@ namespace CodingChallenger.Challenges {
     /// them are blooming, then it is valid... if there are things blooming, then it is invalid
     /// </summary>
     [Challenge(Challenge.Done)]
-    class KEmptySlots : IChallenge<Tuple<int[], int>, int> {
+    class KEmptySlots : ISimpleChallenge<Tuple<int[], int>, int> {
         public int ExpectedOutput() {
             return -1;
         }

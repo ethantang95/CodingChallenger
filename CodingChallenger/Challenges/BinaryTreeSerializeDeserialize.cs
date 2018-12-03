@@ -16,7 +16,7 @@ namespace CodingChallenger.Challenges {
     /// Rather than using substring, I used an index keeping track of the position of the string and advance through the string for whichever symbol.
     /// </summary>
     [Challenge(Challenge.Done)]
-    class BinaryTreeSerializeDeserialize : IChallenge<ChallengeTreeNode, ChallengeTreeNode> {
+    class BinaryTreeSerializeDeserialize : ISimpleChallenge<ChallengeTreeNode, ChallengeTreeNode> {
         public ChallengeTreeNode ExpectedOutput() {
             var tree = new ChallengeTreeNode(1);
             tree.left = new ChallengeTreeNode(2);

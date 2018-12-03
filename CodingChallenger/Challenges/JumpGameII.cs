@@ -19,7 +19,7 @@ namespace CodingChallenger.Challenges {
     /// That is the greedy part, taking the max range available at each jump.
     /// </summary>
     [Challenge(Challenge.Done)]
-    class JumpGameII : IChallenge<int[], int> {
+    class JumpGameII : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 2;
         }

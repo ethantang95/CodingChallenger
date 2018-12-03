@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Take away is adding a char in between each character to make it easier and becoming O(n^2) time
     /// </summary>
     [Challenge(Challenge.Done)]
-    class LongestPalindromeSubstring : IChallenge<string, string> {
+    class LongestPalindromeSubstring : ISimpleChallenge<string, string> {
         public string ExpectedOutput() {
             return "bb";
         }

@@ -21,7 +21,7 @@ namespace CodingChallenger.Challenges {
     /// 
     /// </summary>
     [Challenge(Challenge.DoNotRun)]
-    class ReconstructItinerary : IChallenge<string[,], IList<string>> {
+    class ReconstructItinerary : ISimpleChallenge<string[,], IList<string>> {
         public IList<string> ExpectedOutput() {
             var iterList = new List<string>(new string[] { "JFK", "ATL", "JFK", "SFO", "ATL", "SFO" });
             return iterList;

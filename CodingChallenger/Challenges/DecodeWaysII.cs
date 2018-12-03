@@ -13,7 +13,7 @@ namespace CodingChallenger.Challenges {
     /// also there is a problem here with modular arithmetics where mod(a + b) is not the same as mod(mod(a) + mod(b))
     /// </summary>
     [Challenge(Challenge.Done)]
-    class DecodeWaysII : IChallenge<string, int> {
+    class DecodeWaysII : ISimpleChallenge<string, int> {
         public int ExpectedOutput() {
             return 104671669;
         }

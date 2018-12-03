@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// potentially faster performance
     /// </summary>
     [Challenge(Challenge.Done)]
-    class MergeKLists : IChallenge<List<ChallengeLinkNode>, ChallengeLinkNode> {
+    class MergeKLists : ISimpleChallenge<List<ChallengeLinkNode>, ChallengeLinkNode> {
         public ChallengeLinkNode ExpectedOutput() {
             var first = new ChallengeLinkNode(1);
             var output = first;

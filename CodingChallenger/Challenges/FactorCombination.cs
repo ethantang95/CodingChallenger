@@ -15,7 +15,7 @@ namespace CodingChallenger.Challenges {
     /// Other way of doing this is working our way up from 2 to sqrt(n), this would ensure no duplicates would occur
     /// </summary>
     [Challenge(Challenge.Done)]
-    class FactorCombination : IChallenge<int, IList<IList<int>>> {
+    class FactorCombination : ISimpleChallenge<int, IList<IList<int>>> {
         public IList<IList<int>> ExpectedOutput() {
             var result = new List<IList<int>>();
             result.Add(new List<int>(new int[] { 8, 8 }));

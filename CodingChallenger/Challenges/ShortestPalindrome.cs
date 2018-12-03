@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Simple Brute Force. Could use KMP for better run time
     /// </summary>
     [Challenge(Challenge.Done)]
-    class ShortestPalindrome : IChallenge<string, string> {
+    class ShortestPalindrome : ISimpleChallenge<string, string> {
         public string ExpectedOutput() {
             return "aba";
         }

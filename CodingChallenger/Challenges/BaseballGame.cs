@@ -11,7 +11,7 @@ namespace CodingChallenger.Challenges {
     /// Very simple, use a stack for this
     /// </summary>
     [Challenge(Challenge.Done)]
-    class BaseballGame : IChallenge<string[], int> {
+    class BaseballGame : ISimpleChallenge<string[], int> {
         public int ExpectedOutput() {
             return 27;
         }

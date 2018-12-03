@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.TestChallenges {
     [Challenge(Challenge.Done)]
-    class AddChallenge : IChallenge<int[], int> {
+    class AddChallenge : ISimpleChallenge<int[], int> {
         public int[] Input() {
             return new int[] { 1, 3 };
         }

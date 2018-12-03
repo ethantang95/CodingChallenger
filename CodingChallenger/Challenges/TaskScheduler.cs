@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// where the limitation is based on the most frequent task
     /// </summary>
     [Challenge(Challenge.Done)]
-    class TaskScheduler : IChallenge<Tuple<char[], int>, int> {
+    class TaskScheduler : ISimpleChallenge<Tuple<char[], int>, int> {
         public int ExpectedOutput() {
             return 16;
         }

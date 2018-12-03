@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// The idea of this is to just simulate a stack when adding values into it
     /// </summary>
     [Challenge(Challenge.Done)]
-    class CombinationalSum : IChallenge<CombinationalSumEntry, IList<IList<int>>> {
+    class CombinationalSum : ISimpleChallenge<CombinationalSumEntry, IList<IList<int>>> {
         public IList<IList<int>> ExpectedOutput() {
             var ans = new List<IList<int>>();
             ans.Add(new List<int>() { 7 });

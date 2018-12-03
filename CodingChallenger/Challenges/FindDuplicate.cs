@@ -20,7 +20,7 @@ namespace CodingChallenger.Challenges {
     /// collide again
     /// </summary>
     [Challenge(Challenge.Done)]
-    class FindDuplicate : IChallenge<int[], int> {
+    class FindDuplicate : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 2;
         }

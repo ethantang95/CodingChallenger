@@ -22,7 +22,7 @@ namespace CodingChallenger.Challenges
     /// These are the only 3 cases to check for, there is no need for anything else
     /// </summary>
     [Challenge(Challenge.Done)]
-    class RepeatedStringMatch : IChallenge<Tuple<string, string>, int>
+    class RepeatedStringMatch : ISimpleChallenge<Tuple<string, string>, int>
     {
         public int ExpectedOutput()
         {

@@ -14,7 +14,7 @@ namespace CodingChallenger.Challenges {
     /// This can then be recurisvely be done to construct the tree
     /// </summary>
     [Challenge(Challenge.Done)]
-    class ConstructBinaryTreeFromPreorderAndInorderTraversal : IChallenge<Tuple<int[], int[]>, ChallengeTreeNode> {
+    class ConstructBinaryTreeFromPreorderAndInorderTraversal : ISimpleChallenge<Tuple<int[], int[]>, ChallengeTreeNode> {
         public ChallengeTreeNode ExpectedOutput() {
             return TreeMaker.MakeTreeFromString("3, 9, 20, null, null, 15, 7");
         }

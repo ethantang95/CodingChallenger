@@ -12,7 +12,7 @@ namespace CodingChallenger.Challenges {
     /// that can be the new potential buying point
     /// </summary>
     [Challenge(Challenge.Done)]
-    class BestTimeToBuyStocks : IChallenge<int[], int> {
+    class BestTimeToBuyStocks : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 5;
         }

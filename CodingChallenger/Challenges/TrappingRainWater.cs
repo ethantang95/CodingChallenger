@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingChallenger.Challenges {
     [Challenge(Challenge.Done)]
-    class TrappingRainWater : IChallenge<int[], int> {
+    class TrappingRainWater : ISimpleChallenge<int[], int> {
         public int ExpectedOutput() {
             return 0;
         }
