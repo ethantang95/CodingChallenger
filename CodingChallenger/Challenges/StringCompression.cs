@@ -10,7 +10,7 @@ namespace CodingChallenger.Challenges {
     /// <summary>
     /// Two pointers, one for writing, the other for reading. A lot of other rules with strings
     /// </summary>
-    [Challenge(Challenge.NotDone)]
+    [Challenge(Challenge.Done)]
     class StringCompression : IChallengeModifyInput<char[], int> {
         public bool AssertResult(char[] expected, char[] actual, int output) {
             for (var i = 0; i < output; i++) {
