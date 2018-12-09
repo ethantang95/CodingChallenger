@@ -61,6 +61,7 @@
     <Compile Include="Challenges\CombinationalSum.cs" />
     <Compile Include="Challenges\CourseMaterials.cs" />
     <Compile Include="Challenges\FactorCombination.cs" />
+    <Compile Include="Challenges\GameOfLife.cs" />
     <Compile Include="Challenges\GenerateParentheses.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\IntersectTwoArrays.cs" />
@@ -70,6 +71,8 @@
     <Compile Include="Challenges\KEmptySlots.cs" />
     <Compile Include="Challenges\LongestPalindromeSubstring.cs" />
     <Compile Include="Challenges\LongestSubstringWithoutRepeatChar.cs" />
+    <Compile Include="Challenges\MaxConsecutiveOnes.cs" />
+    <Compile Include="Challenges\MaxConsecutiveOnesII.cs" />
     <Compile Include="Challenges\MaxSubArray.cs" />
     <Compile Include="Challenges\MergeIntervals.cs" />
     <Compile Include="Challenges\MergeKLists.cs" />
