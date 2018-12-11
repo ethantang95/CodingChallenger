@@ -40,6 +40,8 @@ namespace CodingChallenger.Framework.ChallengeExecutor {
                 return CheckEnumerables(output as IEnumerable<int>, expectedOutput as IEnumerable<int>);
             } else if (output is IEnumerable<char>) {
                 return CheckEnumerables(output as IEnumerable<char>, expectedOutput as IEnumerable<char>);
+            } else if (output is IEnumerable<double>) {
+                return CheckEnumerables(output as IEnumerable<double>, expectedOutput as IEnumerable<double>);
             } else if (output is IEnumerable<object>) {
                 return CheckEnumerables(output as IEnumerable<object>, expectedOutput as IEnumerable<object>);
             } else {

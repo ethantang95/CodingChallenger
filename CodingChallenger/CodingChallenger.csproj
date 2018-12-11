@@ -49,6 +49,7 @@
     <Compile Include="Challenges\DecodeWays.cs" />
     <Compile Include="Challenges\DecodeWaysII.cs" />
     <Compile Include="Challenges\EditDistance.cs" />
+    <Compile Include="Challenges\EvaluateDivision.cs" />
     <Compile Include="Challenges\FindDuplicate.cs" />
     <Compile Include="Challenges\FirstUniqChar.cs" />
     <Compile Include="Challenges\FruitTree.cs" />
@@ -65,11 +66,13 @@
     <Compile Include="Challenges\GenerateParentheses.cs" />
     <Compile Include="Challenges\HappyNumber.cs" />
     <Compile Include="Challenges\IntersectTwoArrays.cs" />
+    <Compile Include="Challenges\ISimpleChallenge.cs" />
     <Compile Include="Challenges\JumbledWord.cs" />
     <Compile Include="Challenges\JumpGame.cs" />
     <Compile Include="Challenges\JumpGameII.cs" />
     <Compile Include="Challenges\KEmptySlots.cs" />
     <Compile Include="Challenges\LongestPalindromeSubstring.cs" />
+    <Compile Include="Challenges\LongestSubstringWithKDistrinctChar.cs" />
     <Compile Include="Challenges\LongestSubstringWithoutRepeatChar.cs" />
     <Compile Include="Challenges\MaxConsecutiveOnes.cs" />
     <Compile Include="Challenges\MaxConsecutiveOnesII.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="Framework\ChallengeInterface\ISimpleChallenge.cs" />
     <Compile Include="Framework\ChallengeExecutor\ModifyInputChallengeExecutor.cs" />
     <Compile Include="Framework\ChallengeExecutor\SimpleChallengeExecutor.cs" />
+    <Compile Include="GenericDataStructures\Heap\MaxHeap.cs" />
     <Compile Include="GenericDataStructures\LinkedList\ChallengeLinkNode.cs" />
     <Compile Include="GenericDataStructures\Tree\BinarySortedTree.cs" />
     <Compile Include="GenericDataStructures\Tree\BinaryTreeAbstract.cs" />
@@ -113,6 +117,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestChallenges\AddChallenge.cs" />
+    <Compile Include="TestChallenges\TestMaxHeap.cs" />
     <Compile Include="Tools\Pair.cs" />
     <Compile Include="Tools\TreeMaker.cs" />
   </ItemGroup>
